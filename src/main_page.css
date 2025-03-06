@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #a0a0a0;
+    /* background-color: #121212; */
+}
+
+.home-container {
+    background-color: #27272A;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    padding: 20px; 
+    /* background: #1a1a1a;  */
+    height: 100vh; 
+    width: 100%; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: left;
+} 
+
+
+.logo {
+    color: #00ff00;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a, 
+.sidebar form {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.logout {
+    margin-top: 27rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.posts {
+    padding: 20px;
+    /* overflow: scroll; */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.posts h2 {
+    font-size: 1.5rem;
+}
+
+.post {
+    /* background: #1a1a1a; */
+    margin: 1rem 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.profile {
+    padding: 20px;
+    /* background: #1a1a1a; */
+}
+
+.profile-card {
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.suggested-user {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.dynamic-content {
+    height: 100%; /* Matches the container's height */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
