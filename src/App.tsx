@@ -19,7 +19,7 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="https://circle-fe-git-main-theodores-projects-0c350258.vercel.app/login" element={<Login />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/renew" element={<Renew />} />
           
