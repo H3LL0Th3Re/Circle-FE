@@ -14,7 +14,7 @@ import { UserProvider } from '@/userContext';
 function App() {
   return (
     <UserProvider>
-      <Router>
+{/*       <Router> */}
         <Toaster />
         <Routes>
           {/* Public Routes */}
@@ -35,7 +35,7 @@ function App() {
           />
           
         </Routes>
-      </Router>
+{/*       </Router> */}
     </UserProvider>
   );
 }
