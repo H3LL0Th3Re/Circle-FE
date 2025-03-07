@@ -168,7 +168,7 @@ function Register() {
         </form>
         <Text mt={4} textAlign="center" fontSize="sm">
           Already have an account?{' '}
-          <Link href="https://circle-fe-roan.vercel.app/login" color="green.400">
+          <Link href="/login" color="green.400">
             Login
           </Link>
         </Text>
