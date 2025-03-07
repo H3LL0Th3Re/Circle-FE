@@ -6,7 +6,7 @@ import { FaHome, FaSearch, FaHeart, FaUser, FaSignOutAlt } from 'react-icons/fa'
 
 
 import { useUser } from "@/userContext";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 // import { useThreadStore } from '@/useThreadStore';
 function Sidebar() {
     const { logout } = useUser();
@@ -39,16 +39,16 @@ function Sidebar() {
                 </Heading>
                 <ul>
                     <li>
-                        <a href="/main"><FaHome /> Home</a>
+                        <Link to="/main"><FaHome /> Home</Link>
                     </li>
                     <li>
-                        <a href="/main/search"><FaSearch /> Search</a>
+                        <Link to="/main/search"><FaSearch /> Search</Link>
                     </li>
                     <li>
-                        <a href="/main/follow"><FaHeart /> Follows</a>
+                        <Link to="/main/follow"><FaHeart /> Follows</Link>
                     </li>
                     <li>
-                        <a href="/main/profile-detail"> <FaUser /> Profile</a>
+                        <Link to="/main/profile-detail"> <FaUser /> Profile</Link>
                     </li>
                 </ul>
                 
