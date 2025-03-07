@@ -43,7 +43,7 @@ const FollowPage = () => {
       // Optimistically update the UI
       toggleUserFollow(userId);
 
-      const response = await fetch("http://localhost:3000/api/users/toggle-follow", {
+      const response = await fetch("https://circle-be-gules.vercel.app/api/users/toggle-follow", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const FollowPage = () => {
     try {
       const endpoint = tab === "Following" ? "following" : "followers";
       const response = await fetch(
-        `http://localhost:3000/api/users/${currentUserId}/${endpoint}`,
+        `https://circle-be-gules.vercel.app/api/users/${currentUserId}/${endpoint}`,
         { headers }
       );
       const data = await response.json();
