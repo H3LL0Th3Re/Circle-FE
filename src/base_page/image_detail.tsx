@@ -85,7 +85,7 @@ function DetailedImage() {
   // Fetch post details and replies
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/thread/${postId}`)
+      .get(`https://circle-be-gules.vercel.app/api/thread/${postId}`)
       .then((response) => {
         setPost(response.data);
       })
@@ -114,7 +114,7 @@ function DetailedImage() {
       // console.log(replies)
       
       // Refresh the post data after successful reply
-      const response = await axios.get(`http://localhost:3000/api/thread/${postId}`);
+      const response = await axios.get(`https://circle-be-gules.vercel.app/api/thread/${postId}`);
       setPost(response.data);
     } catch (error) {
       console.error("Failed to submit reply:", error);
