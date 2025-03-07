@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Forgot() {
     return (
         <>
@@ -11,7 +12,7 @@ function Forgot() {
                   <button type="submit">Send Instruction</button><br/><br/>
                 </form>
                 <div className="form-footer">
-                  Already have account? <a href="/login">Login</a>
+                  Already have account? <Link to="/login" className="text-green-500">Login</Link>
                 </div>
               </div>
             </div>
