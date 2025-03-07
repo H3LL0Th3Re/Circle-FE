@@ -19,7 +19,7 @@ function App() {
         <Toaster />
         <Routes>
           {/* Public Routes */}
-          <Route path="/" element={<Register />} />
+          <Route path="/r" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/renew" element={<Renew />} />
