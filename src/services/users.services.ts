@@ -1,4 +1,4 @@
-const apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000/api/";
+const apiURL = import.meta.env.VITE_API_URL || "https://circle-be-gules.vercel.app/api/";
 
 export const getAllusers = (token: string)=>{
     fetch(apiURL + 'users', {
