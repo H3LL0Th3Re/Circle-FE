@@ -8,12 +8,10 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <UserProvider> */}
     <BrowserRouter>
       <Provider>
         <App />
       </Provider>
-    {/* </UserProvider> */}
     </BrowserRouter>
-  </StrictMode>,
-)
+  </StrictMode>
+);
