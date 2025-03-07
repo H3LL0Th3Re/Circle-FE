@@ -104,7 +104,7 @@ function Profile() {
           return;
         }
         const current_user = (jwtDecode(token) as CustomJwtPayload).id;
-        const response = await fetch(`http://localhost:3000/api/users/${current_user}/suggest-users`, {
+        const response = await fetch(`https://circle-be-gules.vercel.app/api/users/${current_user}/suggest-users`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -124,7 +124,7 @@ function Profile() {
 
   const getFollowCounts = async (userId: string) => {
     const token = localStorage.getItem("token");
-    const response = await axios.get(`http://localhost:3000/api/users/${userId}/follow-counts`, {
+    const response = await axios.get(`https://circle-be-gules.vercel.app/api/users/${userId}/follow-counts`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -277,7 +277,7 @@ function Profile() {
       const decodedToken: { userId: string } = jwtDecode(token);
       const currentUserId = decodedToken.userId;
 
-      const response = await fetch("http://localhost:3000/api/users/toggle-follow", {
+      const response = await fetch("https://circle-be-gules.vercel.app/api/users/toggle-follow", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
