@@ -1,7 +1,8 @@
 
 import './App.css';
 import { Toaster } from "@/components/ui/toaster";
-import { Route, BrowserRouter as Routes } from "react-router-dom";
+// import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import Register from './pages/register/register.tsx';
 import Login from './pages/login/login.tsx';
 import Forgot from './pages/forgot_pass/forgot_pass.tsx';
