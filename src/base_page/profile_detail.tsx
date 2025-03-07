@@ -120,7 +120,7 @@ const ProfileDetail = () => {
   
   const getFollowCounts = async (userId: string) => {
     const token = localStorage.getItem("token");
-    const response = await axios.get(`http://localhost:3000/api/users/${userId}/follow-counts`, {
+    const response = await axios.get(`https://circle-be-gules.vercel.app/api/users/${userId}/follow-counts`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
