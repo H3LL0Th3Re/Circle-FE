@@ -129,7 +129,7 @@ const Login: React.FC = () => {
               )}
             </FormControl>
             <Flex justify="flex-end">
-              <Link to="/forgot" className="text-green-500" fontSize="sm">
+              <Link to="/forgot" className="text-green-500">
                 Forgot password?
               </Link>
             </Flex>
