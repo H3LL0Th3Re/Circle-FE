@@ -53,7 +53,7 @@ function SearchPage() {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3000/api/users/search?query=${query}`,
+        `https://circle-be-gules.vercel.app/api/users/search?query=${query}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -98,7 +98,7 @@ function SearchPage() {
       const decodedToken: { userId: string } = jwtDecode(token);
       const currentUserId = decodedToken.userId;
 
-      const response = await fetch("http://localhost:3000/api/users/toggle-follow", {
+      const response = await fetch("https://circle-be-gules.vercel.app/api/users/toggle-follow", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
