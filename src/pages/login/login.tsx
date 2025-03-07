@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
   Input,
   Text,
-  Link,
   Heading,
   VStack,
 } from "@chakra-ui/react";
+
 import { FormControl} from "@chakra-ui/form-control";
 import { toaster } from "@/components/ui/toaster";
 import { z } from "zod";
@@ -129,7 +129,7 @@ const Login: React.FC = () => {
               )}
             </FormControl>
             <Flex justify="flex-end">
-              <Link href="/forgot" color="green.400" fontSize="sm">
+              <Link to="/forgot" className="text-green-500" fontSize="sm">
                 Forgot password?
               </Link>
             </Flex>
@@ -153,7 +153,7 @@ const Login: React.FC = () => {
         </form>
         <Text mt={6} fontSize="sm" color="gray.400" textAlign="center">
           Don’t have an account yet?{" "}
-          <Link href="/" color="green.400">
+          <Link to="/" className="text-green-500">
             Create account
           </Link>
         </Text>
