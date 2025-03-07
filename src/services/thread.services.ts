@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-const apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000/api/"
+const apiURL = import.meta.env.VITE_API_URL || "https://circle-be-gules.vercel.app/api/"
 export const getAllThreads = async (token: string) => {
     try{
         const res: AxiosResponse = await axios.get(apiURL + 'thread', {
@@ -24,7 +24,7 @@ export const getAllThreads = async (token: string) => {
 }
 
 
-// const apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000/api/";
+// const apiURL = import.meta.env.VITE_API_URL || "https://circle-be-gules.vercel.app/api/";
 
 // export const getAllThreads = (token: string)=>{
 //     fetch(apiURL + 'thread', {
