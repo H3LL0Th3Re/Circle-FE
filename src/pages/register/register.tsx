@@ -6,9 +6,9 @@ import {
   Text, 
   Input, 
   Button, 
-  VStack, 
-  Link
+  VStack
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom'
 import{
   Alert
 } from '@/components/ui/alert';
@@ -168,7 +168,7 @@ function Register() {
         </form>
         <Text mt={4} textAlign="center" fontSize="sm">
           Already have an account?{' '}
-          <Link href="/login" color="green.400">
+          <Link to="/login" color="green.400">
             Login
           </Link>
         </Text>
