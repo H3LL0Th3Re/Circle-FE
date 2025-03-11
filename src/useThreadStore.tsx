@@ -78,7 +78,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
         }
     
         try {
-        const response = await fetch("http://localhost:3000/api/thread/thread-user", {
+        const response = await fetch("https://circle-be-gules.vercel.app/api/thread/thread-user", {
             method: "GET",
             headers: {
             Authorization: `Bearer ${token}`,
@@ -161,7 +161,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
         return null;
       }
       try {
-        const response = await axios.get(`http://localhost:3000/api/thread/${threadId}`);
+        const response = await axios.get(`https://circle-be-gules.vercel.app/api/thread/${threadId}`);
         // const thread = response.data.thread;
         set({currentThread: response.data});
         // Update both threads array and currentThread
@@ -214,7 +214,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
       }
 
       try {
-        const response = await fetch("http://localhost:3000/api/thread", {
+        const response = await fetch("https://circle-be-gules.vercel.app/api/thread", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -275,7 +275,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
       }
 
       try {
-        const response = await fetch("http://localhost:3000/api/thread/reply", {
+        const response = await fetch("https://circle-be-gules.vercel.app/api/thread/reply", {
           method: "POST",
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -312,7 +312,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/api/thread/${threadId}`, {
+        const response = await fetch(`https://circle-be-gules.vercel.app/api/thread/${threadId}`, {
           method: "PUT",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -365,7 +365,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
       
         // Only proceed with deletion if user confirmed
         if (result.isConfirmed) {
-          const response = await fetch(`http://localhost:3000/api/thread/${threadId}`, {
+          const response = await fetch(`https://circle-be-gules.vercel.app/api/thread/${threadId}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
@@ -411,7 +411,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
 
       try {
         // Make API call first
-        const response = await fetch('http://localhost:3000/api/thread/like', {
+        const response = await fetch('https://circle-be-gules.vercel.app/api/thread/like', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -426,7 +426,7 @@ export const useThreadStore = create<ThreadState>((set, get) => {
 
         // Update the thread data
 
-        const updatedThreadResponse = await axios.get(`http://localhost:3000/api/thread/${postId}`);
+        const updatedThreadResponse = await axios.get(`https://circle-be-gules.vercel.app/api/thread/${postId}`);
         const updatedThread = updatedThreadResponse.data.thread;
 
 
