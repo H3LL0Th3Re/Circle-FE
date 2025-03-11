@@ -56,7 +56,7 @@ export const useStore = create<UserState>()(
           console.log("Current userId:", userId);
           
           const response = await axios.get(
-            `http://localhost:3000/api/users/${userId}/suggest-users`,
+            `https://circle-be-gules.vercel.app/api/users/${userId}/suggest-users`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -101,7 +101,7 @@ export const useStore = create<UserState>()(
           const decodedToken: { userId: string } = jwtDecode(token);
           const currentUserId = decodedToken.userId;
 
-          const response = await fetch("http://localhost:3000/api/users/toggle-follow", {
+          const response = await fetch("https://circle-be-gules.vercel.app/api/users/toggle-follow", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -139,7 +139,7 @@ export const useStore = create<UserState>()(
     
         try {
             const response = await axios.put(
-                `http://localhost:3000/api/users/${userId}`,
+                `https://circle-be-gules.vercel.app/api/users/${userId}`,
                 formData,
                 {
                     headers: {
@@ -166,7 +166,7 @@ export const useStore = create<UserState>()(
         }
 
         try {
-          const response = await axios.get("http://localhost:3000/api/users", {
+          const response = await axios.get("https://circle-be-gules.vercel.app/api/users", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -203,7 +203,7 @@ export const useStore = create<UserState>()(
 
 //   fetchUser: async (token: string) => {
 //     try {
-//       const response = await axios.get("http://localhost:3000/api/users", {
+//       const response = await axios.get("https://circle-be-gules.vercel.app/api/users", {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //           "Content-Type": "application/json",
@@ -230,7 +230,7 @@ export const useStore = create<UserState>()(
 
 //     try {
 //       const response = await axios.put(
-//         "http://localhost:3000/api/users",
+//         "https://circle-be-gules.vercel.app/api/users",
 //         userData,
 //         {
 //           headers: {
